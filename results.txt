@@ -1,0 +1,23 @@
+Possible solutions:
+
+Two ways to RUN QUERY:
+1. Wrap app in apollo provider and useLazyQuery, useQuery hooks
+2. No need to wrap, create a custom hook, use promise style client.query method
+
+Mocking solutions with GraphQL server
+1. Initialize two different apollo clients in app, choose which client to invoke dynamically
+        - Pass 2nd client as part of query options, keep one default client
+2. Initialize single client with custom fetch, use custom headers to switch URLs at run time
+        - Pass mocking options as part of query
+
+Mocking solutions without GraphQL server
+Use local filesystem, mock JSON files, Use custom hook on top of useLazyQuery, this will fetch the files.
+
+
+Pros and cons:
+- Avoid importing node_modules directly in components, create custom hooks, utility methods
+- Components are easy to unit test and mock
+- Use mock server in end to end tests
+- Uninterrupted dev and QA experience
+- Control mock at query level or global level
+- Overhead to maintain mock server and update schema and resolvers whenever prod api changes

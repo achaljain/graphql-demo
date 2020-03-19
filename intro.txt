@@ -1,0 +1,19 @@
+- What is GraphQL?
+    - A specification for API query language and server side runtime to execute them
+    - Not tied to any specific technology or database
+    - Schema: a strong contract between client and server
+
+- GQL VS REST
+    - Single smart end point
+    - Get what you ask, no over fetching or under fetching
+    - Decoupled front-end and back-end, fast development
+    - Field level analytics
+    - Can be applied on top of existing rest api
+    - Illustration: https://www.howtographql.com/basics/1-graphql-is-the-better-rest/
+
+- Main concepts
+    - ref: https://www.apollographql.com/docs/apollo-server/schema/schema/#scalar-types
+    - Schema Definition Language
+        - Object types
+        - Root types: Query, Mutation, Subscription 
+        - Primitive Types: String, Int, Float, Boolean, ID

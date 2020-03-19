@@ -1,0 +1,34 @@
+{
+  "user1": [
+    {
+      "accountToken": "0001",
+      "accountType": "Checking",
+      "accountNumber": "9878",
+      "accountBalance": 119,
+      "nickName": "Work"
+    },
+    {
+        "accountToken": "0002",
+        "accountType": "Checking",
+        "accountNumber": "9867",
+        "accountBalance": 123,
+        "nickName": "Work"
+      }
+  ],
+  "user2": [
+    {
+      "accountToken": "2223",
+      "accountType": "Checking",
+      "accountNumber": "8374",
+      "accountBalance": 133,
+      "nickName": "Work"
+    },
+    {
+      "accountToken": "2224",
+      "accountType": "Checking",
+      "accountNumber": "2344",
+      "accountBalance": 746,
+      "nickName": "Work"
+    }
+  ]
+}
