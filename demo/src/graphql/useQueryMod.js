@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useLazyQuery } from "@apollo/react-hooks";
 
 const useQueryMod = (query, options) => {
-  const MOCK = "OFF"; // Set from ENV, process.NODE_ENV. Values: 'OFF' 'ON' 'AUTO'
+  const MOCK = process.env.API_MOCK || "OFF"
 
   const [mockHeader, setMockHeader] = useState(false);
 
