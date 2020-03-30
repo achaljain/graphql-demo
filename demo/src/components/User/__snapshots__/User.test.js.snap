@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fetch fetch failed 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      User details
+    </h1>
+    <div
+      data-testid="error-message"
+    >
+       Failed (FETCH) to data
+    </div>
+    <form
+      data-testid="form"
+    >
+      <label
+        for="userId"
+      >
+        User ID: 
+      </label>
+      <input
+        data-testid="user-input"
+        id="userId"
+        placeholder="Please enter a valid user ID"
+        type="text"
+        value="user2"
+      />
+      <button
+        data-testid="submit-btn"
+        type="submit"
+      >
+        Load Data
+      </button>
+      <div
+        data-testid="timeout-message"
+      >
+        Data Fetched successfully!
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Fetch success 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      User details
+    </h1>
+    <form
+      data-testid="form"
+    >
+      <div>
+        First Name : Mary
+      </div>
+      <div>
+        Last Name : Doe
+      </div>
+      <ul
+        data-testid="account-list"
+      >
+        <li>
+          Saving... 8734
+        </li>
+        <li>
+          Checking... 6353
+        </li>
+      </ul>
+      <label
+        for="userId"
+      >
+        User ID: 
+      </label>
+      <input
+        data-testid="user-input"
+        id="userId"
+        placeholder="Please enter a valid user ID"
+        type="text"
+        value="user2"
+      />
+      <button
+        data-testid="submit-btn"
+        type="submit"
+      >
+        Load Data
+      </button>
+      <div
+        data-testid="timeout-message"
+      >
+        Data Fetched successfully!
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;

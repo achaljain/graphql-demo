@@ -1,45 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { ApolloProvider } from "@apollo/react-hooks";
-import logo from "./logo.svg";
 import "./App.css";
 
 import client from "./graphql/client";
-import { getUser } from "./graphql/queries";
-import useQueryMod from "./graphql/useQueryMod";
-
-function Hello() {
-  const [loadData, { error, loading, data }] = useQueryMod(getUser, {
-    variables: { userId: "user1" }
-  });
-
-  console.log("\nloading: ", loading, "\ndata: ", data, "\nerror: ", error);
-
-  return (
-    <div>
-      <button onClick={loadData}>Load Data</button>
-    </div>
-  );
-}
+import User from "./components/User/User";
+import { GRAPHQL, FETCH } from "./components/constants";
 
 function App() {
+  const [mode, setMode] = useState(GRAPHQL);
+  const updateMode = () => {
+    const newMode = mode === GRAPHQL ? FETCH : GRAPHQL;
+    setMode(newMode);
+  };
   return (
     <ApolloProvider client={client}>
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <Hello />
+          <button onClick={updateMode}>{mode}</button>
         </header>
+        <main>
+          <User mode={mode} />
+        </main>
       </div>
     </ApolloProvider>
   );
